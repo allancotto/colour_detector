@@ -1,7 +1,13 @@
-## Robot Package Template
+Instructions:
 
-This is a GitHub template. You can make your own copy by clicking the green "Use this template" button.
+# Colcon build
+colcon build --symlink-install
 
-It is recommended that you keep the repo/package name the same, but if you do change it, ensure you do a "Find all" using your IDE (or the built-in GitHub IDE by hitting the `.` key) and rename all instances of `colour_detector` to whatever your project's name is.
+# Initialises the application and spawns robot in Gazebo
+ros2 launch colour_detector launch_sim.launch.py
 
-Note that each directory currently has at least one file in it to ensure that git tracks the files (and, consequently, that a fresh clone has direcctories present for CMake to find). These example files can be removed if required (and the directories can be removed if `CMakeLists.txt` is adjusted accordingly).
+# Control robot movement
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+# Visualizer
+rviz2
